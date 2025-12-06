@@ -1,8 +1,10 @@
 import {createSlice} from "@reduxjs/toolkit"
+import questions from "../../data/questions";
+// import { createMemoryRouter } from "react-router-dom";
 
 const initialState = {
     currentQuestion: 0,
-    answers: [],
+    answers: Array(questions.length).fill(null),
     result: null,
 }
 
@@ -13,9 +15,13 @@ const quizSlice = createSlice({
         selectAnswer : (state, action) => {
             const {questionIndex, category} = action.payload;
             state.answers[questionIndex] = category
+            if(state.currentQuestion < state.answers.length -1) state.currentQuestion += 1
         },
         nextQuestion: (state) => {
-            state.currentQuestion += 1;
+            if(state.currentQuestion < state.answers.length-1){
+                state.currentQuestion += 1;
+            }
+
         }, 
         prevQuestion: (state) => {
             if (state.currentQuestion > 0) state.currentQuestion -= 1
@@ -25,7 +31,7 @@ const quizSlice = createSlice({
         },
         resetQuiz: (state)=>{
             state.currentQuestion = 0;
-            state.answers = [];
+            state.answers = Array(questions.length).fill(null);
             state.result = null;
         }
     }
