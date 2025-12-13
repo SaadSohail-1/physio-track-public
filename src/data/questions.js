@@ -1,4 +1,5 @@
 const questions = [
+  // SHOULDER
   {
     text: "Does it hurt when you lift your arm outward between 60°–120°?",
     options: [
@@ -21,43 +22,72 @@ const questions = [
     ]
   },
   {
-    text: "Do you feel knee pain while going downstairs?",
+    text: "Do you feel pain in the front of the shoulder when lifting?",
     options: [
-      { label: "Yes", category: "patellofemoral" },
+      { label: "Yes", category: "biceps_tendon" },
+      { label: "No", category: null }
+    ]
+  },
+
+  // KNEE
+  {
+    text: "Do you feel knee pain when going downstairs?",
+    options: [
+      { label: "Yes", category: "pfps" }, // patellofemoral
       { label: "No", category: null }
     ]
   },
   {
     text: "Does your knee click when squatting?",
     options: [
-      { label: "Yes, painful", category: "meniscus" },
-      { label: "Yes, not painful", category: null },
-      { label: "No", category: null }
+      { label: "Painful click", category: "meniscus" },
+      { label: "Click without pain", category: null },
+      { label: "No click", category: null }
     ]
   },
   {
-    text: "Does one hip drop when standing on the other leg?",
+    text: "Does your knee feel like it 'gives way' during activity?",
+    options: [
+      { label: "Yes", category: "acl_instability" },
+      { label: "No", category: null }
+    ]
+  },
+
+  // HIP
+  {
+    text: "When standing on one leg, does the opposite hip drop?",
     options: [
       { label: "Yes", category: "glute_med" },
       { label: "No", category: null }
     ]
   },
   {
+    text: "Do you feel pain in the outer hip while walking?",
+    options: [
+      { label: "Outer hip pain", category: "piriformis" },
+      { label: "Groin pain instead", category: "iliopsoas" },
+      { label: "No pain", category: null }
+    ]
+  },
+
+  // BACK
+  {
     text: "Do you feel sharp leg pain when bending forward?",
     options: [
-      { label: "Yes", category: "discogenic_back" },
-      { label: "No", category: null }
+      { label: "Sharp leg pain", category: "discogenic" },
+      { label: "Only local back pain", category: "erector_spinae" },
+      { label: "No pain", category: null }
     ]
   },
   {
-    text: "Do you feel lower back pain when rising from sitting?",
+    text: "Do you feel lower back pain when rising after long sitting?",
     options: [
       { label: "Yes", category: "si_joint" },
       { label: "No", category: null }
     ]
   },
   {
-    text: "Do you feel core instability when lifting a leg while lying down?",
+    text: "When lifting a leg while lying down, does your lower back arch?",
     options: [
       { label: "Yes", category: "weak_core" },
       { label: "No", category: null }
