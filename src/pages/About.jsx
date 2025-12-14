@@ -2,68 +2,92 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16 text-gray-700">
-      
-      {/* page Header */}
-      <h1 className="text-4xl font-bold text-blue-700 mb-6">About Physio30</h1>
+    <div className="min-h-screen bg-gradient-to-b from-white to-blue-50/30">
+      <div className="max-w-5xl mx-auto px-6 py-20 text-slate-700">
+        
+        {/* --- Hero Section --- */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-blue-800 mb-6 tracking-tight">
+            About Physio30
+          </h1>
+          <p className="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto text-slate-600">
+            Physio30 is a simplified physiotherapy guidance platform designed to help 
+            individuals recover from common musculoskeletal issues through structured 
+            <span className="font-semibold text-blue-600"> 30-day exercise programs</span>.
+          </p>
+        </div>
 
-      {/* physio30 intro */}
-      <p className="text-lg leading-relaxed mb-10 max-w-3xl">
-        Physio30 is a simplified physiotherapy guidance platform designed to help 
-        individuals recover from common musculoskeletal issues through structured  
-        30-day exercise programs. Our goal is to make recovery accessible, 
-        understandable, and personalized without the need for an in-person clinical visit.
-      </p>
+        {/* --- Mission Card --- */}
+        <div className="bg-white p-8 md:p-10 rounded-2xl shadow-lg shadow-blue-100 border border-blue-100 mb-12 hover:shadow-xl transition-shadow duration-300">
+          <h2 className="text-2xl font-bold text-blue-700 mb-4 flex items-center gap-2">
+            Why Physio30?
+          </h2>
+          <p className="leading-7 text-lg text-slate-600">
+            Many people experience back pain, shoulder tightness, knee instability, or hip 
+            mobility problems but never seek proper guidance. <span className="font-semibold text-blue-700">Physio30 solves this</span> by offering 
+            a clinically-inspired self-assessment quiz that identifies the most likely issue 
+            and provides a recovery plan tailored specifically to the result.
+          </p>
+        </div>
 
-      {/* why section */}
-      <div className="bg-blue-50 p-8 rounded-xl shadow-sm mb-10 border border-blue-100">
-        <h2 className="text-2xl font-semibold text-blue-700 mb-4">
-          Why Physio30?
-        </h2>
-        <p className="leading-relaxed">
-          Many people experience back pain, shoulder tightness, knee instability, or hip 
-          mobility problems but never seek proper guidance. Physio30 solves this by offering 
-          a clinically-inspired self-assessment quiz that identifies the most likely issue 
-          and provides a recovery plan tailored to the result.
-        </p>
+        {/* --- Grid Layout for Features & Audience --- */}
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          
+          {/* Left Column: Our Approach */}
+          <div className="bg-blue-600 text-white p-8 rounded-2xl shadow-md transform hover:-translate-y-1 transition-transform duration-300">
+            <h2 className="text-2xl font-bold mb-6 border-b border-blue-400 pb-2">
+              Our Approach
+            </h2>
+            <ul className="space-y-4">
+              {[
+                "Clinically-inspired diagnostic quiz",
+                "Structured 30-day recovery plans",
+                "Simple explanations (No medical jargon)",
+                "Consultation request option",
+                "100% Online & No App Needed"
+              ].map((item, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <span className="mt-1 bg-blue-500 p-1 rounded-full text-xs">✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Right Column: Who Is This For? */}
+          <div className="bg-white p-8 rounded-2xl shadow-lg shadow-blue-50 border border-slate-100">
+            <h2 className="text-2xl font-bold text-blue-800 mb-6 border-b border-blue-100 pb-2">
+              Who Is This For?
+            </h2>
+            <p className="mb-4 text-slate-600">
+              Ideal for students, desk-workers, athletes, or anyone experiencing:
+            </p>
+            <ul className="space-y-3">
+              {[
+                "Persistent Back Pain",
+                "Shoulder Discomfort",
+                "Knee Instability",
+                "Hip Mobility Issues",
+                "General Weakness"
+              ].map((item, index) => (
+                <li key={index} className="flex items-center gap-3 text-slate-700 font-medium">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* --- Footer Disclaimer --- */}
+        <div className="border-t border-slate-200 pt-8 text-center">
+          <p className="text-sm text-slate-400 italic">
+            Disclaimer: Physio30 does not replace clinical diagnosis. It is an academic MVP designed for 
+            informational purposes only.
+          </p>
+        </div>
+
       </div>
-
-      {/* diff approach section */}
-      <div className="bg-white p-8 rounded-xl shadow-md mb-10 border">
-        <h2 className="text-2xl font-semibold text-blue-700 mb-4">
-          What Makes Our Approach Different?
-        </h2>
-        <ul className="space-y-3 list-disc ml-6">
-          <li>Clinically-inspired diagnostic quiz</li>
-          <li>Structured 30-day recovery plans for common problems</li>
-          <li>Simple explanations written for non-medical users</li>
-          <li>Consultation request option for personalized help</li>
-          <li>Completely online, no app installation needed</li>
-        </ul>
-      </div>
-
-      {/* Section 3 */}
-      <div className="bg-blue-50 p-8 rounded-xl shadow-sm border border-blue-100">
-        <h2 className="text-2xl font-semibold text-blue-700 mb-4">
-          Who Is This For?
-        </h2>
-        <p className="leading-relaxed">
-          Physio30 is ideal for students, desk-workers, athletes, or anyone experiencing:
-        </p>
-        <ul className="space-y-2 list-disc ml-6 mt-3">
-          <li>Back pain</li>
-          <li>Shoulder discomfort</li>
-          <li>Knee instability</li>
-          <li>Hip mobility issues</li>
-          <li>Weakness during movement</li>
-        </ul>
-      </div>
-
-      {/* Final note */}
-      <p className="text-sm text-gray-500 mt-10">
-        Disclaimer: Physio30 does not replace clinical diagnosis. It is an academic MVP designed for 
-        informational purposes only.
-      </p>
     </div>
   );
 }
