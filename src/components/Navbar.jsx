@@ -18,7 +18,7 @@ export default function Navbar() {
         <div>
           <Link to="/" className="flex items-center gap-4">
             <img src="/logo.png" alt="Physio30"
-            className="h-16 w-auto object-contain rounded-lg" />
+            className="h-12 w-auto object-contain rounded-lg" />
           <div className="font-semibold text-xl">Physio30</div>
           </Link>
         </div>
