@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const links = [
@@ -14,7 +14,14 @@ export default function Navbar() {
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50 py-2">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="text-2xl font-bold text-blue-800">Physio30</div>
+        {/* <div className="text-2xl font-bold text-blue-800">Physio30</div> */}
+        <div>
+          <Link to="/" className="flex items-center gap-4">
+            <img src="/logo.png" alt="Physio30"
+            className="h-16 w-auto object-contain rounded-lg" />
+          <div className="font-semibold text-xl">Physio30</div>
+          </Link>
+        </div>
 
         <div className="flex space-x-6">
           {links.map((link) => (

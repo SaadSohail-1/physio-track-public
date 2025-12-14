@@ -8,6 +8,8 @@ import Plans from './pages/Plans'
 import PlanDetail from './pages/PlanDetail'
 import Consultation from './pages/Consultation'
 import Problems from './pages/Problems'
+import QuizQuestions from './pages/QuizQuestions'
+import Results from './pages/Results'
 
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -26,7 +28,9 @@ const router = createBrowserRouter([
       { path: "/plans", element: <Plans /> },
       { path: "/plans/:id", element: <PlanDetail /> },
       { path: "/consultation", element: <Consultation /> },
-      { path: "/problems", element: <Problems /> }
+      { path: "/problems", element: <Problems /> },
+      { path: '/quiz/:id' , element: <QuizQuestions />},
+      { path: "/results", element: <Results />}
     ]
   }
 ])

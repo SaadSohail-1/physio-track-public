@@ -1,46 +1,25 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
-const plans = [
-  {
-    id: 'back',
-    title: "Back Recovery Plan",
-    description: "Targeted exercises to relieve back pain and strengthen your core",
-    color: "bg-blue-100"
-  },
-  {
-    id: "shoulder",
-    title: "Shoulder Recovery Plan",
-    description: "Structured program to improve mobility and strengthen shoulder muscles.",
-    color: "bg-blue-200",
-  },
-  {
-    id: "knee",
-    title: "Knee Recovery Plan",
-    description: "Plan to support knee stability and reduce joint pain.",
-    color: "bg-blue-300",
-  },
-  {
-    id: "hip",
-    title: "Hip Recovery Plan",
-    description: "Exercises to improve hip strength and mobility.",
-    color: "bg-blue-400",
-  },
-]
+import plansData from '../data/plansData'
 
 function Plans() {
+  const plansList = Object.values(plansData)
   return (
     <div className='max-w-5xl mx-auto px-6 py-16'>
       <h1 className='text-4xl font-extrabold text-blue-800 mb-8 text-center'>
-        30-Day Recovery Plans
+        Recovery Plans
       </h1>
-
-      <div className='grid md:grid-cols-2 gap-8'>
-      {plans.map((plan) => (
+      <p className='text-center text-gray-600 mb-12'>
+        Browse our specialized rehabilitation plans.</p>
+      <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+      {plansList.map((plan) => (
         <div key={plan.id}
-        className={`p-6 rounded-xl shadow-md ${plan.color} hover:shadow-lg transition`}>
-          <h2 className='text-2xl font-semibold mb-3'>{plan.title}</h2>
-          <p className='mb-4 text-gray-700'>{plan.description}</p>
+        className='bg-white p-6 rounded-xl shadow-md hover:shadow-xl border border-blue-50 transition-all flex flex-col justify-between'>
+          <div>
+            <span className='inline-block bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded mb-3'>{plan.category}</span>
+            <h2 className='text-2xl font-semibold mb-3'>{plan.title}</h2>
+            <p className='mb-4 text-gray-700'>{plan.description}</p>
+          </div>
           <Link to={`/plans/${plan.id}`}
           className='inline-block px-5 py-2 bg-blue-700 text-white font-medium rounded-lg hover:bg-blue-800 transition'>
             View Plan
