@@ -1,114 +1,97 @@
 const resultMapping = {
-  // --- SHOULDER ---
-  supraspinatus: {
-    label: "Supraspinatus Tendinitis",
-    plan: "Shoulder Plan → Rotator cuff strengthening",
-    video: "https://www.youtube.com/embed/A0KZKk3ON0k"
+  // ==========================================
+  // UPPER EXTREMITY (Shoulder, Elbow, Wrist)
+  // ==========================================
+  adhesive_capsulitis: {
+    label: "Adhesive Capsulitis (Frozen Shoulder)",
+    plan: "Shoulder Plan → Range of Motion Restoration",
+    video: "https://www.youtube.com/embed/A0KZKk3ON0k" // Gentle mobility
   },
-  infraspinatus: {
-    label: "Infraspinatus / Teres Minor Weakness",
-    plan: "Shoulder Plan → External rotation protocol",
-    video: "https://www.youtube.com/embed/6X1vHzW6u7Y"
+  rotator_cuff: {
+    label: "Rotator Cuff Tendinopathy",
+    plan: "Shoulder Plan → Cuff Strengthening & Stability",
+    video: "https://www.youtube.com/embed/6X1vHzW6u7Y" // Ext rotation
   },
-  subscapularis: {
-    label: "Subscapularis Weakness",
-    plan: "Shoulder Plan → Internal rotation protocol",
+  shoulder_impingement: {
+    label: "Shoulder Impingement Syndrome",
+    plan: "Shoulder Plan → Scapular Control & Unloading",
     video: "https://www.youtube.com/embed/ZJg6wENtGCE"
   },
-  biceps_long_head: {
-    label: "Biceps Tendinopathy",
-    plan: "Shoulder Plan → Anterior shoulder unloading",
-    video: "https://www.youtube.com/embed/nBzM5Jiei7A"
+  tennis_elbow: {
+    label: "Lateral Epicondylitis (Tennis Elbow)",
+    plan: "Elbow Plan → Extensor Tendon Loading",
+    video: "https://www.youtube.com/embed/g2qM4j4jV4k" // Wrist extension eccentric
+  },
+  golfers_elbow: {
+    label: "Medial Epicondylitis (Golfer's Elbow)",
+    plan: "Elbow Plan → Flexor Tendon Loading",
+    video: "https://www.youtube.com/embed/J7gG9fJ5z9A"
+  },
+  carpal_tunnel: {
+    label: "Carpal Tunnel Syndrome",
+    plan: "Wrist Plan → Nerve Glides & Flexor Stretching",
+    video: "https://www.youtube.com/embed/1C1oWqgZ1b0" // Nerve glide
   },
 
-  // --- KNEE ---
-  patellofemoral: {
-    label: "VMO Weakness / PFPS",
-    plan: "Knee Plan → Patella tracking + VMO activation",
-    video: "https://www.youtube.com/embed/7fKoT3lvsN8"
-  },
-  acl: {
-    label: "ACL Instability",
-    plan: "Knee Plan → Stabilization & controlled flexion",
-    video: "https://www.youtube.com/embed/6N8eUQWbjHI"
-  },
-  meniscus: {
-    label: "Meniscus Irritation",
-    plan: "Knee Plan → ROM + low-load strengthening",
-    video: "https://www.youtube.com/embed/U_Q4LgdK1J0"
-  },
-
-  // --- HIP ---
-  glute_med: {
-    label: "Gluteus Medius Weakness",
-    plan: "Hip Plan → Lateral hip strengthening",
+  // ==========================================
+  // LOWER EXTREMITY (Hip, Knee, Ankle)
+  // ==========================================
+  hip_oa: {
+    label: "Hip Osteoarthritis / Stiffness",
+    plan: "Hip Plan → Joint Mobilization & Glute Strength",
     video: "https://www.youtube.com/embed/2qZ517Rw7ME"
   },
-  piriformis: {
-    label: "Piriformis Syndrome",
-    plan: "Hip Plan → External rotator stretching",
-    video: "https://www.youtube.com/embed/pQdoR3yEcmI"
+  acl_tear: {
+    label: "ACL Deficiency / Instability",
+    plan: "Knee Plan → Dynamic Stability & Proprioception",
+    video: "https://www.youtube.com/embed/6N8eUQWbjHI"
   },
-  iliopsoas: {
-    label: "Iliopsoas Tightness",
-    plan: "Hip Plan → Hip flexor release",
-    video: "https://www.youtube.com/embed/5pTy9KPXoV8"
+  meniscus_tear: {
+    label: "Meniscus Tear / Irritation",
+    plan: "Knee Plan → Non-Weight Bearing ROM & Strength",
+    video: "https://www.youtube.com/embed/U_Q4LgdK1J0"
   },
-
-  // --- BACK ---
-  discogenic_back: {
-    label: "Discogenic Low Back Pain",
-    plan: "Back Plan → Flexion avoidance + core control",
-    video: "https://www.youtube.com/embed/GLd7cE92JFA"
+  patellofemoral: {
+    label: "Patellofemoral Pain Syndrome (PFPS)",
+    plan: "Knee Plan → VMO Activation & Tracking",
+    video: "https://www.youtube.com/embed/7fKoT3lvsN8"
   },
-  si_joint: {
-    label: "SI Joint Dysfunction",
-    plan: "Back Plan → SI stability drills",
-    video: "https://www.youtube.com/embed/9KjE8hZRL4k"
-  },
-  weak_core: {
-    label: "Weak Core Stabilizers",
-    plan: "Back Plan → TVA activation + motor control",
-    video: "https://www.youtube.com/embed/8w6XapnwYHc"
-  },
-  // ADDED: Missing back item
-  erector_spinae: {
-    label: "Paraspinal Muscle Strain",
-    plan: "Back Plan → Soft tissue release & mobility",
-    video: "https://www.youtube.com/embed/29_7k5lT6Fw" // Generic back stretch
+  ankle_sprain: {
+    label: "Lateral Ankle Sprain",
+    plan: "Ankle Plan → Stability & Peroneal Strength",
+    video: "https://www.youtube.com/embed/1Y1v5q1f1q0"
   },
 
-  // --- NECK (NEW ADDITIONS) ---
-  cervical_flexion: {
-    label: "Cervical Flexion Intolerance",
-    plan: "Neck Plan → Deep neck flexor endurance",
-    video: "https://www.youtube.com/embed/G6jZtZ0tM9E" // Chin tucks
-  },
-  upper_traps_tightness: {
-    label: "Upper Trapezius Hypertonicity",
-    plan: "Neck Plan → Trap release & scapular setting",
-    video: "https://www.youtube.com/embed/1vR5_z4n-b0" // Trap stretch
+  // ==========================================
+  // SPINE (Neck & Back)
+  // ==========================================
+  cervical_radiculopathy: {
+    label: "Cervical Radiculopathy",
+    plan: "Neck Plan → Neural Glides & Posture Correction",
+    video: "https://www.youtube.com/embed/Eq45_iYV5gE"
   },
   tension_headache: {
     label: "Cervicogenic Headache",
-    plan: "Neck Plan → Suboccipital release & posture",
-    video: "https://www.youtube.com/embed/xL2eK5Y4ZlU" // Suboccipital release
+    plan: "Neck Plan → Suboccipital Release",
+    video: "https://www.youtube.com/embed/xL2eK5Y4ZlU"
   },
-  rotation_limit_right: {
-    label: "Right Cervical Rotation Restriction",
-    plan: "Neck Plan → Right rotation SNAGs",
-    video: "https://www.youtube.com/embed/Eq45_iYV5gE" // Rotation stretch
+  discogenic_back: {
+    label: "Discogenic Low Back Pain",
+    plan: "Back Plan → Extension Bias & Core Stability",
+    video: "https://www.youtube.com/embed/GLd7cE92JFA"
   },
-  rotation_limit_left: {
-    label: "Left Cervical Rotation Restriction",
-    plan: "Neck Plan → Left rotation SNAGs",
-    video: "https://www.youtube.com/embed/Eq45_iYV5gE"
+  si_joint: {
+    label: "Sacroiliac (SI) Joint Dysfunction",
+    plan: "Back Plan → Pelvic Stability & Symmetry",
+    video: "https://www.youtube.com/embed/9KjE8hZRL4k"
   },
 
-  // --- FALLBACK ---
+  // ==========================================
+  // FALLBACK
+  // ==========================================
   general_mobility: {
-    label: "General Assessment Inconclusive",
-    plan: "General Plan → Full body mobility routine",
+    label: "General Mobility Routine",
+    plan: "General Plan → Full Body Reset",
     video: "https://www.youtube.com/embed/Vf3TjMGWExg"
   }
 };

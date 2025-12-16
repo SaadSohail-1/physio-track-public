@@ -179,8 +179,8 @@ const plansData = {
   },
   
   // --- FALLBACK ---
-  "full_body_mobility": {
-    id: "full_body_mobility",
+  "general_mobility": {
+    id: "general_mobility",
     title: "General Mobility Flow",
     description: "A daily routine to keep joints healthy.",
     category: "General",

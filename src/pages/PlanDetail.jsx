@@ -19,15 +19,15 @@ function PlanDetail() {
       e.preventDefault()
       setStatus('sending')
       emailjs.send(
-        'service_eyeucip',
-        'template_ml41t9p',
+        import.meta.env.VITE_EMAILJS.SERVICE_ID,
+        import.meta.env.VITE_EMAILJS.TEMPLATE_ID,
         {
           plan_name: plan.title,
           buyer_name: buyerInfo.name,
           buyer_email: buyerInfo.email,
           message: `New purchase request for ${plan.title}`
         },
-        'sDUsX1ab0hJo0jTky'
+        import.meta.env.VITE_EMAILJS.PUBLIC_ID
       )
       .then(() => {
         setStatus('success')

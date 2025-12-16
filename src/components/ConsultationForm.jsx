@@ -1,12 +1,16 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
+import { Link } from 'react-router-dom';
 
 function ConsultationForm() {
-  const [state, handleSubmit] = useForm("xrbnlvdr");
+  const [state, handleSubmit] = useForm(import.meta.env.VITE_FORMSPREE_ID);
   if (state.succeeded) {
       return (
         <p className='text-blue-600 text-lg'>
-            Thanks for submitting! We'll get back to you soon.
+            Thanks for submitting! We'll get back to you soon.<br />
+            <Link 
+            className='text-gray-400 underline text-sm'
+            to={"/"}>Go to home</Link>
         </p>
       )
   }
