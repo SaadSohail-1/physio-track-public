@@ -1,11 +1,26 @@
 const plansData = {
-  // --- SHOULDER PLANS ---
+  // ==========================================
+  // SHOULDER PLANS
+  // ==========================================
+  "shoulder_frozen_phase1": {
+    id: "shoulder_frozen_phase1",
+    title: "Frozen Shoulder (Mobility Focus)",
+    description: "Gentle, progressive stretching to restore range of motion in stiff shoulders.",
+    category: "Shoulder",
+    video: { link: "https://www.youtube.com/embed/A0KZKk3ON0k" },
+    weeks: [
+      "Week 1: Pendulum Swings, Passive Table Slides",
+      "Week 2: Cane Exercises (Flexion & Ext Rotation)",
+      "Week 3: Pulley System Mobilization, Wall Crawls",
+      "Week 4: Active Assistive Overhead Reach, Cross-Body Stretch"
+    ]
+  },
   "shoulder_impingement_phase1": {
     id: "shoulder_impingement_phase1",
     title: "Rotator Cuff Strengthening (Impingement)",
     description: "A 4-week protocol designed to open up the subacromial space and strengthen the supraspinatus.",
     category: "Shoulder",
-    video: { link: "https://www.youtube.com/embed/A0KZKk3ON0k" }, //placeholder vids
+    video: { link: "https://www.youtube.com/embed/ZJg6wENtGCE" },
     weeks: [
       "Week 1: Isometric External Rotation (3x30s), Scapular Squeezes",
       "Week 2: Side-lying External Rotation (no weight), Wall Slides",
@@ -26,36 +41,94 @@ const plansData = {
       "Week 4: 90/90 Banded Rotations, Turkish Get-up (partial)"
     ]
   },
-  "shoulder_anterior_unloading": {
-    id: "shoulder_anterior_unloading",
-    title: "Biceps Tendon Relief",
-    description: "Unloads the front of the shoulder and corrects rounded posture.",
-    category: "Shoulder",
-    video: { link: "https://www.youtube.com/embed/nBzM5Jiei7A" },
+
+  // ==========================================
+  // ELBOW & WRIST PLANS
+  // ==========================================
+  "elbow_tennis_phase1": {
+    id: "elbow_tennis_phase1",
+    title: "Tennis Elbow Rehab (Lateral)",
+    description: "Eccentric loading protocol for the common extensor tendon.",
+    category: "Elbow",
+    video: { link: "https://www.youtube.com/embed/g2qM4j4jV4k" },
     weeks: [
-      "Week 1: Pec Stretch, Scapular Retraction Iso",
-      "Week 2: Bicep Isometrics, Serratus Wall Slides",
-      "Week 3: Banded Face Pulls, Rows",
-      "Week 4: Eccentric Bicep Curls, Plank Holds"
+      "Week 1: Wrist Extensor Isometrics (Hold 45s), Massage",
+      "Week 2: Eccentric Wrist Extension (Lowering only)",
+      "Week 3: Concentric Wrist Extension (Light weight)",
+      "Week 4: Tyler Twist (Bar), Hammer Curls"
+    ]
+  },
+  "elbow_golfers_phase1": {
+    id: "elbow_golfers_phase1",
+    title: "Golfer's Elbow Rehab (Medial)",
+    description: "Loading protocol for the flexor pronator mass.",
+    category: "Elbow",
+    video: { link: "https://www.youtube.com/embed/J7gG9fJ5z9A" },
+    weeks: [
+      "Week 1: Wrist Flexor Isometrics, Ulnar Deviation",
+      "Week 2: Eccentric Wrist Flexion (lowering focus)",
+      "Week 3: Pronation/Supination with Hammer",
+      "Week 4: Grip Strengthening, Farmer Carries"
+    ]
+  },
+  "wrist_carpal_tunnel": {
+    id: "wrist_carpal_tunnel",
+    title: "Carpal Tunnel Relief",
+    description: "Nerve gliding and tendon gliding exercises to reduce compression.",
+    category: "Wrist",
+    video: { link: "https://www.youtube.com/embed/1C1oWqgZ1b0" },
+    weeks: [
+      "Week 1: Wrist Splinting (Night), Tendon Glides A & B",
+      "Week 2: Median Nerve Glides (Gentle)",
+      "Week 3: Wrist Flexor Stretching, Grip work",
+      "Week 4: Nerve Glides (Advanced), Weight Bearing Prep"
+    ]
+  },
+  "wrist_thumb_stability": {
+    id: "wrist_thumb_stability",
+    title: "Thumb/De Quervain's Protocol",
+    description: "Unloading the thumb tendons and improving stability.",
+    category: "Wrist",
+    video: { link: "https://www.youtube.com/embed/vLH_h-y0HfY" },
+    weeks: [
+      "Week 1: Thumb Spica Splinting, Isometric Abduction",
+      "Week 2: Finkelstein Stretch (Gentle), Opposition drills",
+      "Week 3: Rubber Band Extension (Finger spread)",
+      "Week 4: Hammer Grip Isometrics, Wrist Radial Deviation"
     ]
   },
 
-  // --- KNEE PLANS ---
-  "knee_tracking_iso": {
-    id: "knee_tracking_iso",
-    title: "Patella Tracking & VMO",
-    description: "Strengthens the inner quad (VMO) to stop knee clicking and pain on stairs.",
-    category: "Knee",
-    video: { link: "https://www.youtube.com/embed/7fKoT3lvsN8" },
+  // ==========================================
+  // HIP & KNEE PLANS
+  // ==========================================
+  "hip_oa_mobility": {
+    id: "hip_oa_mobility",
+    title: "Hip Osteoarthritis Management",
+    description: "Joint mobilization to reduce stiffness and improve walking tolerance.",
+    category: "Hip",
+    video: { link: "https://www.youtube.com/embed/2qZ517Rw7ME" },
     weeks: [
-      "Week 1: Quad Sets (Towel under knee), Straight Leg Raise",
-      "Week 2: Wall Sits (30s), Clamshells",
-      "Week 3: Terminal Knee Extensions (Band), Step-downs",
-      "Week 4: Peterson Step-ups, Goblet Squats"
+      "Week 1: Hip Pendulums, Lying Abduction",
+      "Week 2: Glute Bridges, Sit-to-Stand (High Chair)",
+      "Week 3: Clamshells, Stationary Bike",
+      "Week 4: Step-ups, Lateral Band Walks"
     ]
   },
-  "knee_stability_acl": {
-    id: "knee_stability_acl",
+  "hip_bursitis_relief": {
+    id: "hip_bursitis_relief",
+    title: "Lateral Hip Pain Relief",
+    description: "Unloading the bursa and strengthening the glute medius.",
+    category: "Hip",
+    video: { link: "https://www.youtube.com/embed/5pTy9KPXoV8" },
+    weeks: [
+      "Week 1: Side Lying Pillow Squeeze, Isometric Abduction",
+      "Week 2: Clamshells (No band), Standing Abduction",
+      "Week 3: Lateral Band Walk (Ankles), Single Leg Stance",
+      "Week 4: Side Planks (Knees), Step Downs"
+    ]
+  },
+  "knee_acl_prehab": {
+    id: "knee_acl_prehab",
     title: "Knee Stability (ACL Focus)",
     description: "Proprioception and stability work for giving-way sensations.",
     category: "Knee",
@@ -80,40 +153,83 @@ const plansData = {
       "Week 4: Full Range Squats (assisted), Backward Walking"
     ]
   },
-
-  // --- HIP PLANS ---
-  "hip_stability_basics": {
-    id: "hip_stability_basics",
-    title: "Lateral Hip Stability (Glute Med)",
-    description: "Fixes hip drop and lateral knee pain.",
-    category: "Hip",
-    video: { link: "https://www.youtube.com/embed/2qZ517Rw7ME" },
+  "knee_patella_tracking": {
+    id: "knee_patella_tracking",
+    title: "Patella Tracking & VMO",
+    description: "Strengthens the inner quad (VMO) to stop knee clicking and pain on stairs.",
+    category: "Knee",
+    video: { link: "https://www.youtube.com/embed/7fKoT3lvsN8" },
     weeks: [
-      "Week 1: Clamshells, Side Lying Leg Raises",
-      "Week 2: Banded Clamshells, Glute Bridges",
-      "Week 3: Monster Walks (Band at knees), Fire Hydrants",
-      "Week 4: Single Leg RDL, Lateral Step-ups"
-    ]
-  },
-  "hip_flexor_release": {
-    id: "hip_flexor_release",
-    title: "Hip Flexor Release",
-    description: "For pinching in the groin and tight hips from sitting.",
-    category: "Hip",
-    video: { link: "https://www.youtube.com/embed/5pTy9KPXoV8" },
-    weeks: [
-      "Week 1: Lunge Stretch (Knee down), Glute Squeezes",
-      "Week 2: Couch Stretch, Deadbugs",
-      "Week 3: Standing Hip Flexor March (Band), Glute Bridges",
-      "Week 4: Split Squats, Core Hollow Holds"
+      "Week 1: Quad Sets (Towel under knee), Straight Leg Raise",
+      "Week 2: Wall Sits (30s), Clamshells",
+      "Week 3: Terminal Knee Extensions (Band), Step-downs",
+      "Week 4: Peterson Step-ups, Goblet Squats"
     ]
   },
 
-  // --- BACK PLANS ---
-  "lumbar_flexion_control": {
-    id: "lumbar_flexion_control",
-    title: "Discogenic Pain Protocol",
-    description: "Extension-biased exercises to centralize disc symptoms.",
+  // ==========================================
+  // ANKLE PLANS
+  // ==========================================
+  "ankle_stability_phase1": {
+    id: "ankle_stability_phase1",
+    title: "Ankle Sprain Rehab",
+    description: "Restoring stability and peroneal strength after a lateral sprain.",
+    category: "Ankle",
+    video: { link: "https://www.youtube.com/embed/1Y1v5q1f1q0" },
+    weeks: [
+      "Week 1: Isometrics (Eversion), Alphabet Tracing",
+      "Week 2: Single Leg Balance, Calf Raises (Double)",
+      "Week 3: Single Leg Calf Raise, Banded Eversion",
+      "Week 4: Hop and Stick, Star Excursion Balance"
+    ]
+  },
+  "ankle_plantar_relief": {
+    id: "ankle_plantar_relief",
+    title: "Plantar Fasciitis Relief",
+    description: "Stretching the calf and fascia to reduce morning heel pain.",
+    category: "Ankle",
+    video: { link: "https://www.youtube.com/embed/h0K2o1J1aWk" },
+    weeks: [
+      "Week 1: Frozen Water Bottle Roll, Towel Scrunches",
+      "Week 2: Gastroc Stretch (Wall), Soleus Stretch",
+      "Week 3: Eccentric Heel Drops (Two up, one down)",
+      "Week 4: Single Leg Heel Raise (Weighted), Jump Rope (Gentle)"
+    ]
+  },
+
+  // ==========================================
+  // SPINE (Neck & Back)
+  // ==========================================
+  "neck_nerve_glides": {
+    id: "neck_nerve_glides",
+    title: "Cervical Radiculopathy Protocol",
+    description: "Reduces arm pain and numbness through neural mobilization.",
+    category: "Neck",
+    video: { link: "https://www.youtube.com/embed/Eq45_iYV5gE" },
+    weeks: [
+      "Week 1: Scapular Retractions, Upper Trap Stretch",
+      "Week 2: Median Nerve Glides (Level 1), Chin Tucks",
+      "Week 3: Wall Angels, Thoracic Extension",
+      "Week 4: Nerve Glides (Level 2), Prone T's"
+    ]
+  },
+  "neck_posture_reset": {
+    id: "neck_posture_reset",
+    title: "Postural Neck Reset",
+    description: "Corrects 'Tech Neck' and mechanical stiffness.",
+    category: "Neck",
+    video: { link: "https://www.youtube.com/embed/G6jZtZ0tM9E" },
+    weeks: [
+      "Week 1: Chin Tucks (Supine), Pec Stretch",
+      "Week 2: Seated Chin Tucks, Levator Scap Stretch",
+      "Week 3: Deep Neck Flexor Holds, Banded Pull Aparts",
+      "Week 4: Quadruped Chin Tucks, Foam Rolling T-Spine"
+    ]
+  },
+  "back_disc_protocol": {
+    id: "back_disc_protocol",
+    title: "Discogenic (Extension) Protocol",
+    description: "Extension-biased exercises to centralize disc symptoms (better with standing).",
     category: "Back",
     video: { link: "https://www.youtube.com/embed/GLd7cE92JFA" },
     weeks: [
@@ -123,62 +239,49 @@ const plansData = {
       "Week 4: Plank (knees), Cat-Cow (gentle)"
     ]
   },
-  "si_joint_stability": {
-    id: "si_joint_stability",
-    title: "SI Joint Stability",
-    description: "Lock down the pelvis to stop shifting pain.",
-    category: "Back",
-    video: { link: "https://www.youtube.com/embed/9KjE8hZRL4k" },
-    weeks: [
-      "Week 1: Isometric Adductor Squeeze (Ball between knees)",
-      "Week 2: Glute Bridges (Band above knees)",
-      "Week 3: Deadbugs (Core braced), Side Planks",
-      "Week 4: Single Leg Glute Bridge, Suitcase Carry"
-    ]
-  },
-  "core_motor_control": {
-    id: "core_motor_control",
-    title: "Core Motor Control",
-    description: "Re-learning how to brace the spine during movement.",
+  "back_stenosis_protocol": {
+    id: "back_stenosis_protocol",
+    title: "Stenosis (Flexion) Protocol",
+    description: "Flexion-biased exercises to open the spinal canal (better with sitting).",
     category: "Back",
     video: { link: "https://www.youtube.com/embed/8w6XapnwYHc" },
     weeks: [
-      "Week 1: Abdominal Bracing (lying), Pelvic Tilts",
-      "Week 2: Deadbug (Legs only), Heel Taps",
-      "Week 3: Bird-Dog, Side Plank (knees)",
-      "Week 4: Pallof Press, Farmer Carries"
+      "Week 1: Double Knee to Chest, Posterior Pelvic Tilts",
+      "Week 2: Child's Pose, Deadbugs (Legs supported)",
+      "Week 3: Seated Flexion Stretch, Glute Bridges",
+      "Week 4: Stationary Bike (Leaning forward), Core Bracing"
     ]
   },
-
-  // --- NECK PLANS ---
-  "neck_deep_flexor": {
-    id: "neck_deep_flexor",
-    title: "Deep Neck Flexor Training",
-    description: "Corrects forward head posture and weak neck stabilizers.",
-    category: "Neck",
-    video: { link: "https://www.youtube.com/embed/G6jZtZ0tM9E" },
+  "back_core_stability": {
+    id: "back_core_stability",
+    title: "Mechanical Back Pain (Core)",
+    description: "General stability for muscular back pain.",
+    category: "Back",
+    video: { link: "https://www.youtube.com/embed/9KjE8hZRL4k" },
     weeks: [
-      "Week 1: Chin Tucks (supine), Scapular Setting",
-      "Week 2: Chin Tucks (seated against wall)",
-      "Week 3: Chin Tuck with Head Lift (1cm)",
-      "Week 4: Quadruped Chin Tucks"
+      "Week 1: Finding Neutral Spine, Deadbug (Hold)",
+      "Week 2: Bird Dog, Side Plank (Knees)",
+      "Week 3: Pallof Press, Farmer Carry",
+      "Week 4: Full Plank, Squat with Bracing"
     ]
   },
-  "neck_mobility_rotation": {
-    id: "neck_mobility_rotation",
-    title: "Cervical Mobility & SNAGs",
-    description: "Restores lost rotation in the neck.",
-    category: "Neck",
-    video: { link: "https://www.youtube.com/embed/Eq45_iYV5gE" },
+  "back_sciatica_relief": {
+    id: "back_sciatica_relief",
+    title: "Sciatica & Nerve Flossing",
+    description: "Mobilizing the sciatic nerve to reduce leg pain.",
+    category: "Back",
+    video: { link: "https://www.youtube.com/embed/tFnGWE2rmcg" },
     weeks: [
-      "Week 1: Towel Snag (Rotation), Upper Trap Stretch",
-      "Week 2: Levator Scapulae Stretch, Doorway Stretch",
-      "Week 3: Active Rotation with Overpressure",
-      "Week 4: Thoracic Extensions, Wall Angels"
+      "Week 1: Sciatic Nerve Glide (Lying), Piriformis Stretch",
+      "Week 2: Sciatic Glide (Seated), Hamstring Stretch",
+      "Week 3: Slump Flossing, Glute Strengthening",
+      "Week 4: Nerve Glide (Standing), Core Integration"
     ]
   },
   
-  // --- FALLBACK ---
+  // ==========================================
+  // FALLBACK
+  // ==========================================
   "general_mobility": {
     id: "general_mobility",
     title: "General Mobility Flow",

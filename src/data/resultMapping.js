@@ -1,65 +1,90 @@
 const resultMapping = {
   // ==========================================
-  // UPPER EXTREMITY (Shoulder, Elbow, Wrist)
+  // UPPER EXTREMITY
   // ==========================================
   adhesive_capsulitis: {
     label: "Adhesive Capsulitis (Frozen Shoulder)",
-    plan: "Shoulder Plan → Range of Motion Restoration",
-    video: "https://www.youtube.com/embed/A0KZKk3ON0k" // Gentle mobility
+    planId: "shoulder_frozen_phase1",
+    video: "https://www.youtube.com/watch?v=voxwcEraw6g"
   },
   rotator_cuff: {
     label: "Rotator Cuff Tendinopathy",
-    plan: "Shoulder Plan → Cuff Strengthening & Stability",
-    video: "https://www.youtube.com/embed/6X1vHzW6u7Y" // Ext rotation
+    planId: "shoulder_rotation_phase1",
+    video: "https://www.youtube.com/watch?v=kopTVqSoTMQ"
   },
   shoulder_impingement: {
     label: "Shoulder Impingement Syndrome",
-    plan: "Shoulder Plan → Scapular Control & Unloading",
-    video: "https://www.youtube.com/embed/ZJg6wENtGCE"
+    planId: "shoulder_impingement_phase1",
+    // Bob & Brad: Shoulder Impingement
+    video: "https://www.youtube.com/watch?v=3NyxqGX6amY"
   },
   tennis_elbow: {
     label: "Lateral Epicondylitis (Tennis Elbow)",
-    plan: "Elbow Plan → Extensor Tendon Loading",
-    video: "https://www.youtube.com/embed/g2qM4j4jV4k" // Wrist extension eccentric
+    planId: "elbow_tennis_phase1",
+    // Bob & Brad: Tennis Elbow Fix
+    video: "https://www.youtube.com/watch?v=8ZTXWe81k8E"
   },
   golfers_elbow: {
     label: "Medial Epicondylitis (Golfer's Elbow)",
-    plan: "Elbow Plan → Flexor Tendon Loading",
-    video: "https://www.youtube.com/embed/J7gG9fJ5z9A"
+    planId: "elbow_golfers_phase1",
+    // Bob & Brad: Golfer's Elbow
+    video: "https://www.youtube.com/watch?v=dDZhNzKV7tA"
   },
   carpal_tunnel: {
     label: "Carpal Tunnel Syndrome",
-    plan: "Wrist Plan → Nerve Glides & Flexor Stretching",
-    video: "https://www.youtube.com/embed/1C1oWqgZ1b0" // Nerve glide
+    planId: "wrist_carpal_tunnel",
+    // Bob & Brad: Carpal Tunnel Self Treatment
+    video: "https://www.youtube.com/watch?v=AG29IFQWdtk"
+  },
+  de_quervains: {
+    label: "De Quervain's Tenosynovitis",
+    planId: "wrist_thumb_stability",
+    // Ask Doctor Jo: De Quervain's
+    video: "https://www.youtube.com/watch?v=Hm0uVjHaXGk"
   },
 
   // ==========================================
-  // LOWER EXTREMITY (Hip, Knee, Ankle)
+  // LOWER EXTREMITY
   // ==========================================
   hip_oa: {
     label: "Hip Osteoarthritis / Stiffness",
-    plan: "Hip Plan → Joint Mobilization & Glute Strength",
-    video: "https://www.youtube.com/embed/2qZ517Rw7ME"
+    planId: "hip_oa_mobility",
+    // Ask Doctor Jo: Hip Arthritis
+    video: "https://www.youtube.com/watch?v=3RFMtiPHBYQ"
+  },
+  trochanteric_bursitis: {
+    label: "Greater Trochanteric Pain Syndrome",
+    planId: "hip_bursitis_relief",
+    // Bob & Brad: Hip Bursitis
+    video: "https://www.youtube.com/watch?v=E3bQU7AEVII"
   },
   acl_tear: {
     label: "ACL Deficiency / Instability",
-    plan: "Knee Plan → Dynamic Stability & Proprioception",
-    video: "https://www.youtube.com/embed/6N8eUQWbjHI"
+    planId: "knee_acl_prehab",
+    // Ask Doctor Jo: ACL Rehab
+    video: "https://www.youtube.com/watch?v=ZeCZkA7Xeu4"
   },
   meniscus_tear: {
     label: "Meniscus Tear / Irritation",
-    plan: "Knee Plan → Non-Weight Bearing ROM & Strength",
-    video: "https://www.youtube.com/embed/U_Q4LgdK1J0"
+    planId: "knee_meniscus_unload",
+    // Bob & Brad: Meniscus Tear
+    video: "https://www.youtube.com/watch?v=hfHhVDW0aVE"
   },
-  patellofemoral: {
+  patellofemoral_pain: {
     label: "Patellofemoral Pain Syndrome (PFPS)",
-    plan: "Knee Plan → VMO Activation & Tracking",
-    video: "https://www.youtube.com/embed/7fKoT3lvsN8"
+    planId: "knee_patella_tracking",
+    // Bob & Brad: Runner's Knee
+    video: "https://www.youtube.com/watch?v=bjHD-sYTFp4"
   },
-  ankle_sprain: {
+  lateral_ankle_sprain: {
     label: "Lateral Ankle Sprain",
-    plan: "Ankle Plan → Stability & Peroneal Strength",
-    video: "https://www.youtube.com/embed/1Y1v5q1f1q0"
+    planId: "ankle_stability_phase1",
+    video: "https://www.youtube.com/watch?v=W9lT3gfehC0"
+  },
+  plantar_fasciitis: {
+    label: "Plantar Fasciitis",
+    planId: "ankle_plantar_relief",
+    video: "https://www.youtube.com/watch?v=8s84jwwBx0I"
   },
 
   // ==========================================
@@ -67,23 +92,28 @@ const resultMapping = {
   // ==========================================
   cervical_radiculopathy: {
     label: "Cervical Radiculopathy",
-    plan: "Neck Plan → Neural Glides & Posture Correction",
-    video: "https://www.youtube.com/embed/Eq45_iYV5gE"
+    planId: "neck_nerve_glides",
+    video: "https://www.youtube.com/watch?v=rZNC-IVPYFI"
   },
-  tension_headache: {
-    label: "Cervicogenic Headache",
-    plan: "Neck Plan → Suboccipital Release",
-    video: "https://www.youtube.com/embed/xL2eK5Y4ZlU"
+  mechanical_neck_pain: {
+    label: "Mechanical Neck Pain",
+    planId: "neck_posture_reset",
+    video: "https://www.youtube.com/watch?v=MDL9hI4Agdw"
   },
-  discogenic_back: {
-    label: "Discogenic Low Back Pain",
-    plan: "Back Plan → Extension Bias & Core Stability",
-    video: "https://www.youtube.com/embed/GLd7cE92JFA"
+  lumbar_radiculopathy: {
+    label: "Lumbar Radiculopathy (Sciatica)",
+    planId: "back_sciatica_relief",
+    video: "https://www.youtube.com/watch?v=4W0t9kP-DqM"
   },
-  si_joint: {
-    label: "Sacroiliac (SI) Joint Dysfunction",
-    plan: "Back Plan → Pelvic Stability & Symmetry",
-    video: "https://www.youtube.com/embed/9KjE8hZRL4k"
+  lumbar_stenosis: {
+    label: "Lumbar Spinal Stenosis",
+    planId: "back_stenosis_protocol",
+    video: "https://www.youtube.com/watch?v=7OvyosNOiUw"
+  },
+  mechanical_low_back: {
+    label: "Mechanical Low Back Pain",
+    planId: "back_core_stability",
+    video: "https://www.youtube.com/watch?v=L4IRskxywmU"
   },
 
   // ==========================================
@@ -91,8 +121,8 @@ const resultMapping = {
   // ==========================================
   general_mobility: {
     label: "General Mobility Routine",
-    plan: "General Plan → Full Body Reset",
-    video: "https://www.youtube.com/embed/Vf3TjMGWExg"
+    planId: "general_mobility",
+    video: "https://www.youtube.com/watch?v=Ru1hYrwCZJo"
   }
 };
 
