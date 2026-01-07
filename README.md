@@ -43,7 +43,7 @@ As this is the **Minimum Viable Product (MVP)** designed for a stakeholder pitch
 
 1.  **Clone the repository**
     ```bash
-    git clone [https://github.com/SaadSohail-1/physio-track-public.git](https://github.com/SaadSohail-1/physio-track-public.git)
+    git clone https://github.com/SaadSohail-1/physio-track-public.git
     ```
 
 2.  **Navigate to project directory**
