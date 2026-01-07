@@ -63,7 +63,7 @@ As this is the **Minimum Viable Product (MVP)** designed for a stakeholder pitch
     ```
 
 ## 👤 Author
-**[Your Name]**
+**[Saad Sohail]**
 * **Role:** Lead Frontend Engineer (Freelance)
 * **Portfolio:** https://saad-portfolio-indol.vercel.app
 * **LinkedIn:** linkedin.com/in/saad-sohail11
