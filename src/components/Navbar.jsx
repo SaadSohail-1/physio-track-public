@@ -20,7 +20,7 @@ export default function Navbar() {
         {/* <div className="text-2xl font-bold text-blue-800">Physio30</div> */}
         <div className="group">
           <Link to="/" className="flex items-center gap-4">
-            <img src="/logo.png" alt="Physio30"
+            <img src="/logo.png" alt="PhysioTrack"
             className="h-12 w-auto object-contain rounded-lg group-hover:translate-x-0.5 transition:transform duration-300" />
           <div className="font-semibold tracking-wider text-xl group-hover:translate-x-0.5 duration-300">PhysioTrack</div>
           </Link>
