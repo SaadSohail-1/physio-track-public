@@ -30,15 +30,14 @@ As this is the **Minimum Viable Product (MVP)** designed for a stakeholder pitch
 * **Scalability:** The code is structured to easily integrate with a REST API (Node/Express) in the next development phase.
 
 ## 📸 Screenshots
-*(Add screenshots of your app here to make the repo look professional)*
 
 | Landing Page | Assessment Flow |
-|:---:|:---:|:---:|
-| ![Landing Page](/landingpage.png) | ![Assessment](/quizpage.png) | ![Question](/question.png)
+|:---:|:---:|
+| ![Landing Page](/public//landingpage.png) | ![Assessment](/public//quizpage.png) |
 
-| Score Dashboard |
-|:---:|
-| ![Dashboard](/result.png) |
+| Question Screen | Score Dashboard |
+|:---:|:---:|
+| ![Question](/public/question.png) | ![Dashboard](/public/result.png) |
 
 ## 🚀 How to Run Locally
 
