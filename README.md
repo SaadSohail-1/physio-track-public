@@ -14,7 +14,7 @@ The application guides patients through a structured self-assessment questionnai
 ## ⚡ Key Engineering Features
 * **Complex State Management:** Utilized **Redux Toolkit** to manage multi-step form data, preserving patient inputs across different routes without a database.
 * **Dynamic Scoring Algorithm:** Implemented client-side logic to process user answers in real-time and generate a specific "Health Score" and risk category.
-* **Responsive UI:** Fully responsive layout built with **CSS Modules** ensuring accessibility across mobile and desktop devices.
+* **Responsive UI:** Fully responsive layout built with **Tailwind CSS** ensuring accessibility across mobile and desktop devices.
 * **SPA Navigation:** Seamless page transitions using **React Router v6**.
 
 ## 🛠️ Tech Stack
@@ -33,17 +33,17 @@ As this is the **Minimum Viable Product (MVP)** designed for a stakeholder pitch
 
 | Landing Page | Assessment Flow |
 |:---:|:---:|
-| ![Landing Page](/public//landingpage.png) | ![Assessment](/public//quizpage.png) |
+| ![Landing Page](public/landingpage.png) | ![Assessment](public/quizpage.png) |
 
 | Question Screen | Score Dashboard |
 |:---:|:---:|
-| ![Question](/public/question.png) | ![Dashboard](/public/result.png) |
+| ![Question](public/question.png) | ![Dashboard](public/result.png) |
 
 ## 🚀 How to Run Locally
 
 1.  **Clone the repository**
     ```bash
-    gh repo clone SaadSohail-1/physio-track-public
+    git clone [https://github.com/SaadSohail-1/physio-track-public.git](https://github.com/SaadSohail-1/physio-track-public.git)
     ```
 
 2.  **Navigate to project directory**
