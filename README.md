@@ -4,7 +4,7 @@
 ![Deployment](https://img.shields.io/badge/Deployed-Vercel-black?logo=vercel)
 ![Stack](https://img.shields.io/badge/Tech-React%20%7C%20Redux%20%7C%20SPA-blue)
 
-**Live Demo:** [Insert your Vercel Link Here]
+**Live Demo:** https://physio-track-public.vercel.app
 
 ## 📖 Overview
 **PhysioTrack** is a Single Page Application (SPA) designed to digitize the physiotherapy assessment process. This project was built as a **technical prototype (MVP)** for a client to demonstrate a business concept for remote patient diagnosis.
@@ -21,7 +21,7 @@ The application guides patients through a structured self-assessment questionnai
 * **Frontend:** React.js (Vite)
 * **State Management:** Redux Toolkit (RTK)
 * **Routing:** React Router DOM
-* **Styling:** CSS Modules / Vanilla CSS
+* **Styling:** Tailwind CSS
 * **Deployment:** Vercel
 
 ## 🏗️ Architecture Decision: Why no Backend?
@@ -33,23 +33,23 @@ As this is the **Minimum Viable Product (MVP)** designed for a stakeholder pitch
 *(Add screenshots of your app here to make the repo look professional)*
 
 | Landing Page | Assessment Flow |
-|:---:|:---:|
-| ![Landing Page](path/to/screenshot1.png) | ![Assessment](path/to/screenshot2.png) |
+|:---:|:---:|:---:|
+| ![Landing Page](/landingpage.png) | ![Assessment](/quizpage.png) | ![Question](/question.png)
 
 | Score Dashboard |
 |:---:|
-| ![Dashboard](path/to/screenshot3.png) |
+| ![Dashboard](/result.png) |
 
 ## 🚀 How to Run Locally
 
 1.  **Clone the repository**
     ```bash
-    git clone [https://github.com/](https://github.com/)[your-username]/[repo-name].git
+    gh repo clone SaadSohail-1/physio-track-public
     ```
 
 2.  **Navigate to project directory**
     ```bash
-    cd [repo-name]
+    cd physio-track-public
     ```
 
 3.  **Install dependencies**
@@ -65,8 +65,8 @@ As this is the **Minimum Viable Product (MVP)** designed for a stakeholder pitch
 ## 👤 Author
 **[Your Name]**
 * **Role:** Lead Frontend Engineer (Freelance)
-* **Portfolio:** [Link to your Portfolio Website]
-* **LinkedIn:** [Link to your LinkedIn]
+* **Portfolio:** https://saad-portfolio-indol.vercel.app
+* **LinkedIn:** linkedin.com/in/saad-sohail11
 
 ---
 *Note: This repository serves as a showcase of the frontend architecture delivered to the client.*
