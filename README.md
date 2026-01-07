@@ -1,16 +1,72 @@
-# React + Vite
+# PhysioTrack - Physiotherapy Self-Assessment Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Project Status](https://img.shields.io/badge/Status-MVP%20Delivered-success)
+![Deployment](https://img.shields.io/badge/Deployed-Vercel-black?logo=vercel)
+![Stack](https://img.shields.io/badge/Tech-React%20%7C%20Redux%20%7C%20SPA-blue)
 
-Currently, two official plugins are available:
+**Live Demo:** [Insert your Vercel Link Here]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📖 Overview
+**PhysioTrack** is a Single Page Application (SPA) designed to digitize the physiotherapy assessment process. This project was built as a **technical prototype (MVP)** for a client to demonstrate a business concept for remote patient diagnosis.
 
-## React Compiler
+The application guides patients through a structured self-assessment questionnaire, calculates health scores dynamically, and provides preliminary recommendations without requiring immediate doctor intervention.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ⚡ Key Engineering Features
+* **Complex State Management:** Utilized **Redux Toolkit** to manage multi-step form data, preserving patient inputs across different routes without a database.
+* **Dynamic Scoring Algorithm:** Implemented client-side logic to process user answers in real-time and generate a specific "Health Score" and risk category.
+* **Responsive UI:** Fully responsive layout built with **CSS Modules** ensuring accessibility across mobile and desktop devices.
+* **SPA Navigation:** Seamless page transitions using **React Router v6**.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
+* **Frontend:** React.js (Vite)
+* **State Management:** Redux Toolkit (RTK)
+* **Routing:** React Router DOM
+* **Styling:** CSS Modules / Vanilla CSS
+* **Deployment:** Vercel
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🏗️ Architecture Decision: Why no Backend?
+As this is the **Minimum Viable Product (MVP)** designed for a stakeholder pitch, the architecture focuses on **frontend logic and user flow**.
+* **Session Persistence:** Redux state is persisted during the session to simulate a live database experience.
+* **Scalability:** The code is structured to easily integrate with a REST API (Node/Express) in the next development phase.
+
+## 📸 Screenshots
+*(Add screenshots of your app here to make the repo look professional)*
+
+| Landing Page | Assessment Flow |
+|:---:|:---:|
+| ![Landing Page](path/to/screenshot1.png) | ![Assessment](path/to/screenshot2.png) |
+
+| Score Dashboard |
+|:---:|
+| ![Dashboard](path/to/screenshot3.png) |
+
+## 🚀 How to Run Locally
+
+1.  **Clone the repository**
+    ```bash
+    git clone [https://github.com/](https://github.com/)[your-username]/[repo-name].git
+    ```
+
+2.  **Navigate to project directory**
+    ```bash
+    cd [repo-name]
+    ```
+
+3.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+4.  **Start the development server**
+    ```bash
+    npm run dev
+    ```
+
+## 👤 Author
+**[Your Name]**
+* **Role:** Lead Frontend Engineer (Freelance)
+* **Portfolio:** [Link to your Portfolio Website]
+* **LinkedIn:** [Link to your LinkedIn]
+
+---
+*Note: This repository serves as a showcase of the frontend architecture delivered to the client.*
