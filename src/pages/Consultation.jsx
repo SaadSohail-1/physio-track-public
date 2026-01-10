@@ -15,7 +15,7 @@ export default function Consultation() {
       <ConsultationForm />
       
       <p className="text-sm text-gray-500 mt-6">
-        *Physio30 does not replace professional medical diagnosis.
+        *PhysioTrack does not replace professional medical diagnosis.
       </p>
     </div>
   );

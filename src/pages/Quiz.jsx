@@ -53,10 +53,6 @@ function Quiz() {
             to={`/quiz/${part.id}`}
             className='group bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-blue-600 transition-all duration-300 relative overflow-hidden flex flex-col justify-between h-64'
           >
-            {/* Decorative Number */}
-            {/* <span className='absolute top-4 right-6 text-6xl font-black text-gray-100 group-hover:text-blue-50 transition-colors select-none'>
-              0{index + 1}
-            </span> */}
 
             {/* Content */}
             <div className='relative z-10'>

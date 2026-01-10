@@ -85,20 +85,7 @@ function PlanDetail() {
       ))}
       </div>
 
-      {/* video */}
-      {/* <div className="mt-8">
-        <h3 className="text-xl font-semibold text-blue-700 mb-4">Preview Guide</h3>
-        <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-lg">
-            <iframe
-                src={plan.video.link}
-                title={plan.title}
-                allowFullScreen
-                className="w-full h-full"
-            />
-        </div>
-       </div> */}
-
-      {/* purchase modallll */}
+      {/* purchase modal*/}
       {isModalOpen && (
         <div className='fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4'>
           <div className='bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full relative'>

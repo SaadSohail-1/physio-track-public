@@ -9,7 +9,7 @@ function QuizQuestions() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // 1. GET DATA
+  // 1.GET DATA
   // This looks up the body part in your new decisionTree.js file
   const data = decisionTree[id];
 
@@ -19,9 +19,7 @@ function QuizQuestions() {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [yesCount, setYesCount] = useState(0);
 
-  // ------------------------------------------------
   // CASE 0: DATA MISSING (Safety Check)
-  // ------------------------------------------------
   if (!data) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -34,9 +32,7 @@ function QuizQuestions() {
     );
   }
 
-  // ------------------------------------------------
   // CASE 1: SUB-REGION SELECTION (The "Skip" Logic)
-  // ------------------------------------------------
   // If the data is an object with "subRegions: true", and we haven't picked one yet...
   if (data.subRegions && !selectedSubRegion) {
     const regions = Object.keys(data.regions); // ["shoulder", "elbow", "wrist"]
@@ -67,16 +63,12 @@ function QuizQuestions() {
     );
   }
 
-  // ------------------------------------------------
   // DETERMINE THE LIST OF DISEASES TO CHECK
-  // ------------------------------------------------
   // If it has sub-regions, grab the specific array (e.g., regions.shoulder).
   // If it's a simple array (like Neck), just use 'data' directly.
   const currentPath = data.subRegions ? data.regions[selectedSubRegion] : data;
 
-  // ------------------------------------------------
   // CASE 2: END OF QUIZ (No Diagnosis Found)
-  // ------------------------------------------------
   if (!currentPath || diseaseIndex >= currentPath.length) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50 px-6">
@@ -101,9 +93,7 @@ function QuizQuestions() {
     );
   }
 
-  // ------------------------------------------------
   // CASE 3: QUESTIONING LOGIC
-  // ------------------------------------------------
   const currentDisease = currentPath[diseaseIndex];
   const currentQuestionText = currentDisease.questions[questionIndex];
 

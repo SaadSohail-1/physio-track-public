@@ -8,10 +8,10 @@ export default function About() {
         {/* --- Hero Section --- */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-extrabold text-blue-800 mb-6 tracking-tight">
-            About Physio30
+            About PhysioTrack
           </h1>
           <p className="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto text-slate-600">
-            Physio30 is a simplified physiotherapy guidance platform designed to help 
+            PhysioTrack is a simplified physiotherapy guidance platform designed to help 
             individuals recover from common musculoskeletal issues through structured 
             <span className="font-semibold text-blue-600"> 30-day exercise programs</span>.
           </p>
@@ -20,11 +20,11 @@ export default function About() {
         {/* --- Mission Card --- */}
         <div className="bg-white p-8 md:p-10 rounded-2xl shadow-lg shadow-blue-100 border border-blue-100 mb-12 hover:shadow-xl transition-shadow duration-300">
           <h2 className="text-2xl font-bold text-blue-700 mb-4 flex items-center gap-2">
-            Why Physio30?
+            Why PhysioTrack?
           </h2>
           <p className="leading-7 text-lg text-slate-600">
             Many people experience back pain, shoulder tightness, knee instability, or hip 
-            mobility problems but never seek proper guidance. <span className="font-semibold text-blue-700">Physio30 solves this</span> by offering 
+            mobility problems but never seek proper guidance. <span className="font-semibold text-blue-700">PhysioTrack solves this</span> by offering 
             a clinically-inspired self-assessment quiz that identifies the most likely issue 
             and provides a recovery plan tailored specifically to the result.
           </p>
@@ -82,7 +82,7 @@ export default function About() {
         {/* --- Footer Disclaimer --- */}
         <div className="border-t border-slate-200 pt-8 text-center">
           <p className="text-sm text-slate-400 italic">
-            Disclaimer: Physio30 does not replace clinical diagnosis. It is an academic MVP designed for 
+            Disclaimer: PhysioTrack does not replace clinical diagnosis. It is an academic MVP designed for 
             informational purposes only.
           </p>
         </div>
